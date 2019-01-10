@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+git checkout gh-pages
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo $BRANCH
+if [ "$BRANCH" != "gh-pages" ]
+then
+  echo "Must be on the gh-pages branch to publish"
+  echo "You are on $BRANCH"
+  exit 2
+fi
+webpack
+rm -rf !("www")
+cp -r www/ .
+rm -rf www/
+git -r
+git add .
+git commit -m 'publishing ...'
+git push origin gh-pages
