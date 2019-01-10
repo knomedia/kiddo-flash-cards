@@ -1,0 +1,25 @@
+@import "./styles/variables";
+
+.Client {
+  h1 {
+    font-weight: 100;
+    font-size: 3.0em;
+    margin: 20px;
+  }
+  &__Next {
+    color: $slate;
+    width: 546px;
+    height: 71px;
+  }
+  &__NumberButton {
+    padding: 10px;
+    margin: 5px;
+    width: 50px;
+    color: $slate;
+
+    &__Selected {
+      background: lighten($slate, 10%);
+      color: $teal;
+    }
+  }
+}

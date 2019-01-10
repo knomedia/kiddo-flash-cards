@@ -1,0 +1,90 @@
+@import "variables";
+@import "reset";
+@import "mixins/buttons";
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100%;
+  background: $slate;
+}
+body {
+  margin: 0;
+  font: 16px/1 sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-default;
+  color: $teal;
+  font-weight: 400;
+  min-height: 100%;
+  line-height: 1.4em;
+  background: $slate;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 4px 0;
+  padding: 0;
+}
+main,
+li {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+strong {
+  font-weight: bold;
+}
+a,
+button {
+  color: inherit;
+  transition: .2s;
+}
+a {
+  text-decoration: none;
+}
+button {
+  @include default-button();
+}
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+div {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+//input {
+//  @include default-input($width: 'no-width');
+//}
+form {
+  margin-top: 1em;
+  label, input {
+    margin-bottom: 0.4em;
+    display: block;
+  }
+  input {
+    margin-bottom: 0.8em;
+  }
+}
+
+#app {
+  min-height: 100%
+}
+
